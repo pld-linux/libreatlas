@@ -1,4 +1,3 @@
-# $Revision: 1.21 $, $Date: 2011/07/16 18:25:43 $
 Summary:	Geography Education application built on top of SpatiaLite and RasterLite
 Summary(pl.UTF-8):	Geograficzny program edukacyjny stworzony w oparciu o SpatiaLite i RasterLite
 Name:		libreatlas
