@@ -2,7 +2,7 @@ Summary:	Geography Education application built on top of SpatiaLite and RasterLi
 Summary(pl.UTF-8):	Geograficzny program edukacyjny stworzony w oparciu o SpatiaLite i RasterLite
 Name:		libreatlas
 Version:	1.0.0a
-Release:	7
+Release:	8
 License:	GPL v3+
 Group:		Applications
 Source0:	http://www.gaia-gis.it/gaia-sins/libreatlas-sources/%{name}-%{version}.tar.gz
@@ -56,6 +56,8 @@ ln -sf /usr/bin/wx-gtk2-unicode-config wx-bin/wx-config
 %{__automake}
 # configure refers to wx-config with no option to override
 PATH=$(pwd)/wx-bin:$PATH
+export CFLAGS="%{rpmcflags} -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H"
+export CXXFLAGS="%{rpmcxxflags} -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H"
 %configure
 
 %{__make}
