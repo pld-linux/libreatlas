@@ -2,7 +2,7 @@ Summary:	Geography Education application built on top of SpatiaLite and RasterLi
 Summary(pl.UTF-8):	Geograficzny program edukacyjny stworzony w oparciu o SpatiaLite i RasterLite
 Name:		libreatlas
 Version:	1.0.0a
-Release:	8
+Release:	9
 License:	GPL v3+
 Group:		Applications
 Source0:	http://www.gaia-gis.it/gaia-sins/libreatlas-sources/%{name}-%{version}.tar.gz
@@ -24,10 +24,10 @@ BuildRequires:	libtiff-devel
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	pkgconfig
 BuildRequires:	proj-devel >= 4
-BuildRequires:	wxGTK2-unicode-devel >= 2.8.12-4
+BuildRequires:	wxGTK3-unicode-devel >= 2.8.12-4
 BuildRequires:	zlib-devel
 Requires:	libgeotiff-devel >= 1.2.5
-Requires:	wxGTK2-unicode >= 2.8.12-4
+Requires:	wxGTK3-unicode >= 2.8.12-4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,7 +46,7 @@ danych LibreAtlas, będące cyfrową alternatywą dla atlasu papierowego.
 %patch1 -p1
 
 mkdir wx-bin
-ln -sf /usr/bin/wx-gtk2-unicode-config wx-bin/wx-config
+ln -sf /usr/bin/wx-gtk3-unicode-config wx-bin/wx-config
 
 %build
 %{__libtoolize}
